@@ -8,6 +8,7 @@
 from openpyxl import Workbook
 from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
 from openpyxl.utils import get_column_letter
+from openpyxl.formatting.rule import CellIsRule
 
 # 账户配置
 ACCOUNTS = [
@@ -366,8 +367,6 @@ def create_account_sheet(wb, account_name, leverage_limit):
     
     # 设置条件格式（通过背景色）
     # 注意：openpyxl 不支持直接设置条件格式公式，所以我们使用规则
-    from openpyxl.formatting.rule import CellIsRule
-    
     # 对预警状态单元格应用条件格式
     red_fill = PatternFill(start_color="FF0000", end_color="FF0000", fill_type="solid")
     green_fill = PatternFill(start_color="00FF00", end_color="00FF00", fill_type="solid")
