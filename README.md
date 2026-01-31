@@ -46,5 +46,36 @@ python3 generate_leverage_template.py
 
 安装依赖：
 ```bash
-pip install openpyxl
+pip install -r requirements.txt
+```
+
+## 文件结构
+
+```
+invest/
+├── README.md                              # 项目说明
+├── 使用说明.md                            # 详细使用说明
+├── requirements.txt                       # Python 依赖
+├── generate_leverage_template.py          # 模板生成脚本
+├── test_template.py                       # 模板测试脚本
+├── create_demo.py                         # 创建示例数据脚本
+├── leverage_calculation_template.xlsx     # Excel 杠杆率计算模板（空模板）
+└── .gitignore                             # Git 忽略文件配置
+```
+
+## 使用示例
+
+### 生成空白模板
+```bash
+python3 generate_leverage_template.py
+```
+
+### 生成带示例数据的模板
+```bash
+python3 create_demo.py
+```
+
+### 测试模板结构
+```bash
+python3 test_template.py
 ```
